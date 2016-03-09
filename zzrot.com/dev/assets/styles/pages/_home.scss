@@ -9,21 +9,98 @@
     #page-title {
         @include row();
         font-size: 2.5em;
+        text-align:left;
     }
     #main-content {
         @include row();
 
         #text-messages {
-            @include span-columns(6);
+            @include span-columns(5);
             height: 80vh;
+            padding: 0 10px;
+            visibility: hidden;
+
+            .bubbledLeft,.bubbledRight {
+            margin-top: 20px;
+            padding: 5px 9px;
+            max-width: 50%;
+            clear: both;
+            position: relative;
+}
+
+.bubbledLeft{
+    float: left;
+    margin-right: auto;
+    -webkit-border-radius: 8px 8px 8px 0px;
+    -moz-border-radius: 8px 8px 8px 0px;
+    -o-border-radius: 8px 8px 8px 0px;
+    -ms-border-radius: 8px 8px 8px 0px;
+    border-radius: 8px 8px 8px 0px;
+    background-color: #9b59b6;
+    color: #ffffff;
+}
+
+.bubbledLeft:before {
+    border-bottom: 10px solid #9b59b6;
+    border-left: 9px solid rgba(0, 0, 0, 0);
+    position: absolute;
+    bottom: 0;
+    left: -8px;
+    content: "";
+}
+
+.bubbledRight{
+    float: right;
+    margin-left: auto;
+    text-align: right;
+    -webkit-border-radius: 8px 8px 0px 8px;
+    -moz-border-radius: 8px 8px 0px 8px;
+    -o-border-radius: 8px 8px 0px 8px;
+    -ms-border-radius: 8px 8px 0px 8px;
+    border-radius: 8px 8px 0px 8px;
+    background-color: #E5E4E9;
+    color: $dark-gray;
+}
+
+.bubbledRight:before {
+    border-bottom: 9px solid #E5E4E9;
+    border-right: 9px solid rgba(0, 0, 0, 0);
+    position: absolute;
+    bottom: 0;
+    right: -8px;
+    content: "";
+}
         }
 
         #description {
-            @include span-columns(6);
+            @include span-columns(7);
             height:80vh;
+            line-height: 0;
+            h2 {
+                font-size:4em;
+                line-height:.8;
+                margin: .5em 0 .5em;
+            }
+            .secondary {
+                font-size:3.8em;
+            }
         }
     }
     #scroll-content {
         @include row();
     }
+}
+
+//This is used to make the svgs clickable. Should put this somewhere into the base.
+a.svg {
+  position: relative;
+  display: inline-block;
+}
+a.svg:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
 }

@@ -1,6 +1,6 @@
 version: '2'
 services:
-    example.com:
+    zzrot.com:
         image: skilgarriff/alpine-nginx
         volumes:
             - ./zzrot.com/public:/var/www/html:ro

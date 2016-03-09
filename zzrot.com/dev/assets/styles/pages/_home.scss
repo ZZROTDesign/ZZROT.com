@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.landing-page {
+    @include outer-container(100);
+
+    #page-title {
+        @include row();
+        text-align:center;
+        font-size: 2.5em;
+    }
+    #main-content {
+        @include row();
+    }
+    #scroll-content {
+        @include row();
+    }
+}

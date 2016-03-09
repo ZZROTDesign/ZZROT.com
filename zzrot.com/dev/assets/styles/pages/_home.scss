@@ -4,14 +4,24 @@
 
 .landing-page {
     @include outer-container(100);
+    text-align:center;
 
     #page-title {
         @include row();
-        text-align:center;
         font-size: 2.5em;
     }
     #main-content {
         @include row();
+
+        #text-messages {
+            @include span-columns(6);
+            height: 80vh;
+        }
+
+        #description {
+            @include span-columns(6);
+            height:80vh;
+        }
     }
     #scroll-content {
         @include row();

@@ -7,7 +7,7 @@ services:
         build: ./compose/developer
         container_name: dev
         volumes:
-            -   ./example.com:/usr/src/app:rw
+            -   ./zzrot.com:/usr/src/app:rw
         working_dir: /usr/src/app
         ports:
             -   3000:3000

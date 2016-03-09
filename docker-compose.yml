@@ -3,13 +3,8 @@ services:
     example.com:
         image: skilgarriff/alpine-nginx
         volumes:
-            - ./example.com/public:/var/www/html:ro
+            - ./zzrot.com/public:/var/www/html:ro
         networks:
             - frontend
-
-    staging.example.com:
-        image: skilgarriff/alpine-nginx
-        volumes:
-            - ./staging.example.com/public:/var/www/html:ro
 networks:
     frontend:

@@ -18,10 +18,6 @@ services:
             - ./compose/lencrypt/well-known:/var/www/letsencrypt/
             - ./compose/lencrypt/config:/etc/letsencrypt
 
-    example.com:
-        expose:
-            -   8080
-            
-    staging.example.com:
+    zzrot.com:
         expose:
             -   8080

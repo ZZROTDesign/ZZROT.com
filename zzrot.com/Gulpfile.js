@@ -123,7 +123,7 @@ gulp.task('html', function () {
 gulp.task('sitemap', function () {
     gulp.src(paths.html.input)
         .pipe(sitemap({
-            siteUrl: 'http://www.seankilgarriff.com'
+            siteUrl: 'http://www.zzrot.com'
         }))
         .pipe(gulp.dest(paths.extras.output));
 });

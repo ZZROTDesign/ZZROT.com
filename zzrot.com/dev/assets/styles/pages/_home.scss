@@ -1,11 +1,24 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
-
+#menu-button {
+    float:right;
+    margin-top:10px;
+    margin-right:10px;
+}
 .landing-page {
     @include outer-container(100%);
     text-align:center;
     height: 100vh;
+
+    nav {
+        float:right;
+        color: #B37FC7;
+        li{
+            display:inline;
+            padding: 5px;
+        }
+    }
 
     #page-title {
         @include row();
@@ -93,6 +106,14 @@
     height:60vh;
     text-align:center;
     background-color: #532C63;
+    color: white;
+
+    #left {
+        @include span-columns(6);
+    }
+    #right {
+        @include span-columns(6);
+    }
 
 
 }

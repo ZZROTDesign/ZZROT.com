@@ -1,13 +1,13 @@
-.bubbledLeft,.bubbledRight {
+.message-to,.message-from {
 margin-top: 20px;
 padding: 5px 9px;
 max-width: 50%;
 clear: both;
 position: relative;
-visibility: hidden;
+//visibility: hidden;
 }
 
-.bubbledLeft{
+.message-to{
 float: left;
 margin-right: auto;
 -webkit-border-radius: 8px 8px 8px 0px;
@@ -19,7 +19,7 @@ background-color: #9b59b6;
 color: #ffffff;
 }
 
-.bubbledLeft:before {
+.message-to:before {
 border-bottom: 10px solid #9b59b6;
 border-left: 9px solid rgba(0, 0, 0, 0);
 position: absolute;
@@ -28,7 +28,7 @@ left: -8px;
 content: "";
 }
 
-.bubbledRight{
+.message-from{
 float: right;
 margin-left: auto;
 text-align: right;
@@ -41,7 +41,7 @@ background-color: #E5E4E9;
 color: $dark-gray;
 }
 
-.bubbledRight:before {
+.message-from:before {
 border-bottom: 9px solid #E5E4E9;
 border-right: 9px solid rgba(0, 0, 0, 0);
 position: absolute;

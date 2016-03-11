@@ -90,6 +90,17 @@
     text-align:center;
     padding-top:50px;
     padding-bottom:50px;
+    @include clearfix;
+
+    .content{
+        .content-image {
+            @include span-columns(4);
+        }
+
+        .content-text {
+            @include span-columns(8);
+        }
+    }
 
     h1 {
         font-size: 3em;
@@ -116,64 +127,7 @@
     }
 }
 
-footer {
-    background-color: $light-gray;
-    font-size: .5em;
-    @include clearfix;
 
-    a {
-        color: $dark-gray;
-        cursor:pointer;
-    }
-    a:hover {
-        color: $light-purple;
-    }
-
-    #sitemap, #contact, #social {
-        @include span-columns(12);
-
-        padding:20px;
-
-        @include media($medium-screen){
-            @include span-columns(4);
-            padding: 50px;
-        }
-
-
-    }
-
-    #sitemap {
-
-
-        li {
-            display: inline-block;
-        }
-        ul li:after { content: " \00b7"; }
-        ul li:last-child:after { content: none; }
-    }
-
-    #contact{
-        #address, #phone, #email{
-            i, p {
-                display:inline-block;
-                padding: 3px;
-            }
-
-            i {
-                font-size:2em;
-            }
-        }
-    }
-
-    #social {
-        #socialMediaIcons{
-            font-size:3em;
-            i {
-                padding-left:15px;
-            }
-        }
-    }
-}
 
 
 

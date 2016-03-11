@@ -4,10 +4,11 @@
 
 #{$all-buttons} {
   appearance: none;
-  background-color: $action-color;
   border: 0;
   border-radius: $base-border-radius;
-  color: #fff;
+  border: 1px solid $dark-gray;
+  color: $dark-gray;
+  background-color: white;
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
@@ -24,7 +25,8 @@
 
   &:hover,
   &:focus {
-    background-color: shade($action-color, 20%);
+    background-color: $action-color;
+    border: 1px solid $action-color;
     color: #fff;
   }
 

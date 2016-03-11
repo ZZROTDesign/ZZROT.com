@@ -1,20 +1,21 @@
+$hamburger-height: 50px;
+$hamburger-width: 50px;
+$hamburger-color: #9b59b6;
+$hamburger-border-color: #9b59b6;
+
 * {
     transition:.25s ease-in-out;
 }
 
 #menu-button {
-  width:50px;
-  height:50px;
-  position:relative;
+  width: $hamburger-width;
+  height: $hamburger-height;
   cursor:pointer;
-  border-radius:5px;
-  border: solid 1px #9b59b6;
-  transition:.25s ease-in-out;
+  position: fixed;
 
   span {
     display:block;
-    background:#9b59b6;
-    border-radius:2px;
+    background:$hamburger-color;
   }
 
   #hamburger {
@@ -43,6 +44,7 @@
     position:absolute;
     height:100%;
     width:100%;
+    z-index:100;
     transform:rotate(45deg);
     span{
       &:nth-child(1){

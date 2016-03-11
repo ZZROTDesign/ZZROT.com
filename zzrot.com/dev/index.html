@@ -14,7 +14,7 @@ d88888P d88888P 88   YD  `Y88P'     YP
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>ZZROT Design</title>
-        <meta name="description" content="The Official Website of the one and only ZZROT Design Agency">
+        <meta name="description" content="A design agency that treats web development as an investment in your business, and thus provides the most efficient, modern and secure sites.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!--Favicon Links-->
@@ -47,6 +47,7 @@ d88888P d88888P 88   YD  `Y88P'     YP
 
         <!--  Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet" type="text/css">
 
     </head>
     <body>
@@ -54,32 +55,42 @@ d88888P d88888P 88   YD  `Y88P'     YP
 
         <!-- Landing Page -->
         <div class="landing-page">
-            <div id="page-title">
-                <a class="svg" href="">
-                    <object type="image/svg+xml" data="images/logo.svg" height = "60" width = "60">
-                        <img src="images/logo.svg" alt="ZZROT">
-                    </object>
-                </a>
-                <nav>
-                    <ul>
-                        <li>
-                            Home
-                        </li>
-                        <li>
-                            The Team
-                        </li>
-                        <li>
-                            Quote
-                        </li>
-                        <li>
-                            Our Stack
-                        </li>
-                        <li>
-                            Contact
-                        </li>
-                    </ul>
+                <!-- Navigation -->
+                <nav class="top-nav">
+                    <!-- Logo -->
+                    <div id="logo">
+                        <a class="svg" href="">
+                            <object type="image/svg+xml" data="images/logo.svg" height = "60" width = "60">
+                                <img src="images/logo.svg" alt="ZZROT">
+                            </object>
+                        </a>
+                    </div>
                 </nav>
-            </div>
+                <!-- Hamburger Menu Icon -->
+                <div id="menu-button">
+                    <div id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div id="cross">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <!-- Overlay that displays navigation on click -->
+                <div class="overlay" id="overlay">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">The Team</a></li>
+                            <li><a href="#">Quote</a></li>
+                            <li><a href="#">Our Stack</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
             <div id="main-content">
 
                 <div id="description">
@@ -116,23 +127,63 @@ d88888P d88888P 88   YD  `Y88P'     YP
                 level of professionalism and scrutiny that every other aspect of business is. We don't take the risk of
                 finding someone on craigslist to do our taxes, just as we don't want you to take that risk with your website.
                 We don't hide behind layers of complexity. We strive to use the newest and most powerful tech in all of our projects,
-                and ensure that as a customer, you know exactly what we use and how we use it. 
+                and ensure that as a customer, you know exactly what we use and how we use it.
             </p>
         </div>
         <div class="preview">
             <h1>What makes us different</h1>
+            <div class="content">
+                <h2>Containerization</h2>
+                <p>
+                    We develop our websites and applications by building microservices. This drastically increases
+                    the security, and speed of
+                    We use Docker, a platform that been revolutionizing the web development
+                    community.  Docker containers are customizable, isolated processes that
+                    run with less overhead than traditional development methods and make
+                    feature addition and marketing tools like A/B testing manageable and practical.
+                </p>
+            </div>
+            <div class="content">
+                <h2></h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                    qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+            <div class="content">
+                <h2></h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                    qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
         </div>
         <div class="sell-me">
             <div id="left">
-                h
+                If you would like to partner with us now
             </div>
             <div id="right">
-                Still not convinced? Here's why no one will beat what we provide.
+                Still not convinced? We encourage you to check out all of the tools we use to
+                deliver the best service possible.
             </div>
         </div>
         <footer>
-
+            Social Media Icons... Etc. Copy write. Etc.
         </footer>
+
+        <!-- Scripts Baby -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="js/main.min.js"></script>
 
         <script type="text/javascript" id="__bs_script__">//<![CDATA[
             document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.11.1.js'><\/script>".replace("HOST", location.hostname));

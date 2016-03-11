@@ -3,35 +3,36 @@
 // -----------------------------------------------------------------------------
 #menu-button {
     float:right;
-    margin-top:10px;
-    margin-right:10px;
+    right: 20px;
+    top: 2px;
+    z-index: 100;
 }
 .landing-page {
     @include outer-container(100%);
     text-align:center;
     height: 100vh;
 
-    nav {
-        float:right;
+    .top-nav {
+        position:fixed;
+        height: $navigation-height;
+        width: 100%;
+        font-family: $base-font-family;
+        background-color: white;
         color: #B37FC7;
-        li{
-            display:inline;
-            padding: 5px;
+        @include clearfix;
+        #logo {
+            float: left;
         }
     }
 
-    #page-title {
-        @include row();
-        text-align:left;
-        padding-left:20px;
-    }
     #main-content {
+        padding-top: $navigation-height;
         @include direction-context(right-to-left) {
             #text-messages {
                 @include span-columns(12);
                 padding: 0 10px;
 
-                @include media($medium-screen){
+                @include media($large-screen){
                     @include span-columns(4);
                 }
             }
@@ -39,7 +40,7 @@
             #description {
                 @include span-columns(12);
 
-                @include media($medium-screen){
+                @include media($large-screen){
                     @include span-columns(8);
                 }
 
@@ -74,12 +75,10 @@
 .philosophy{
     background-color: #B37FC7;
     text-align:center;
-    color: white;
-    padding-bottom: 50px;
+    padding: 50px;
 
     h1 {
         font-size: 3em;
-        padding-top: 50px;
     }
     p {
         font-size: 1.2em;
@@ -87,14 +86,13 @@
 }
 
 .preview{
-    height:60vh;
     background-color: #8F4BAA;
     text-align:center;
-    color: white;
+    padding-top:50px;
+    padding-bottom:50px;
 
     h1 {
         font-size: 3em;
-        padding-top: 50px;
     }
     p {
         font-size: 1.2em;
@@ -110,9 +108,11 @@
 
     #left {
         @include span-columns(6);
+        padding-top: 50px;
     }
     #right {
         @include span-columns(6);
+        padding-top: 50px;
     }
 
 

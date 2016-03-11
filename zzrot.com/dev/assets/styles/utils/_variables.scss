@@ -1,5 +1,5 @@
 // Typography
-$base-font-family: 'Lato';
+$base-font-family: 'Merriweather';
 $heading-font-family: 'Lato';
 $code-font-family: $monospace;
 $sans-serif: 'Open Sans', sans-serif;
@@ -24,11 +24,6 @@ $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
 
-    //Front Page Colors
-$blue-green: #c0dfd9;
-$light-gray2: #e3e3e3;
-$light-blue: #9ad3de;
-
 // Font Colors
 $base-font-color: $dark-gray;
 $action-color: $blue;
@@ -50,4 +45,4 @@ $base-duration: 150ms;
 $base-timing: ease;
 
 //Navigation
-$navigation-height: 60px;
+$navigation-height: 50px;

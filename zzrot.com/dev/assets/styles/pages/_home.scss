@@ -86,7 +86,7 @@
 }
 
 .preview{
-    background-color: #8F4BAA;
+    background-color: white;
     text-align:center;
     padding-top:50px;
     padding-bottom:50px;
@@ -111,6 +111,7 @@
 }
 
 .sell-me {
+    background-color: #8F4BAA;
     @include outer-container(100);
     text-align:center;
 

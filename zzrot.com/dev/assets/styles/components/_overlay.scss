@@ -1,6 +1,8 @@
+$overlay-color: #B37FC7;
+
 .overlay {
   position: fixed;
-  background: pink;
+  background: $overlay-color;
   top: 0;
   left: 0;
   width: 100%;
@@ -9,8 +11,7 @@
   visibility: hidden;
   transition: opacity .35s, visibility .35s, height .35s;
   overflow: hidden;
-  color: black;
-  z-index: 50;
+  z-index: 1;
 
   &.open {
     opacity: .9;
@@ -63,6 +64,7 @@
         position: relative;
         text-decoration: none;
         overflow: hidden;
+        color: white;
 
         &:hover:after,
          &:focus:after,

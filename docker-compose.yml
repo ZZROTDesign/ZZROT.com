@@ -1,10 +1,16 @@
 version: '2'
 services:
     zzrot.com:
-        image: skilgarriff/alpine-nginx
+        image: skilgarriff/alpine-caddy
         volumes:
-            - ./zzrot.com/public:/var/www/html:ro
+            -   ./Caddyfile:/etc/Caddyfile
+            -   ./zzrot.com/public:/var/www/html
         networks:
-            - frontend
+            -   frontend
+    blog.zzrot.com:
+        image: ghost
+        networks:
+          -   frontend
+
 networks:
     frontend:

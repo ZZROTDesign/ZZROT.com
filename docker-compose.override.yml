@@ -2,7 +2,7 @@ version: '2'
 services:
     zzrot.com:
         ports:
-            -   80:8080
+            -   "80:80"
     developer:
         build: ./compose/developer
         container_name: dev
@@ -10,7 +10,7 @@ services:
             -   ./zzrot.com:/usr/src/app:rw
         working_dir: /usr/src/app
         ports:
-            -   3000:3000
-            -   3001:3001
+            -   "3000:3000"
+            -   "3001:3001"
         networks:
             - frontend

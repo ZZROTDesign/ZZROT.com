@@ -1,154 +1,33 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
-#menu-button {
-    float:right;
-    right: 20px;
-    top: 2px;
-    z-index: 2;
+
+$c: #58c;
+$b: rgba(255,255,255,.2);
+$t: rgba(255,255,255,.1);
+$n: transparent;
+
+html {
+  background-image: linear-gradient(to bottom, $c 0%, darken($c, 15%) 100%);
 }
+
 .landing-page {
     @include outer-container(100%);
-    text-align:center;
-    height: 100vh;
-
-    .top-nav {
-        position:fixed;
-        height: $navigation-height;
-        width: 100%;
-        font-family: $base-font-family;
-        background-color: white;
-        color: #B37FC7;
-        @include clearfix;
-        #logo {
-            float: left;
-        }
-    }
-
-    #main-content {
-        padding-top: $navigation-height;
-        @include direction-context(right-to-left) {
-            #text-messages {
-                @include span-columns(12);
-                padding: 0 10px;
-
-                @include media($large-screen){
-                    @include span-columns(4);
-                }
-            }
-
-            #description {
-                @include span-columns(12);
-
-                @include media($large-screen){
-                    @include span-columns(8);
-                }
-
-                line-height: 0;
-                h2 {
-                    line-height:.8;
-                    margin: .5em 0 .5em;
-                    font-size:9vw;
-                    @include media($medium-screen){
-                        font-size:4.4vw;
-                    }
-                }
-                .secondary {
-                    font-size:8.5vw;
-
-                    @include media($medium-screen){
-                        font-size:4vw;
-                    }
-                }
-            }
-        }
-    }
-    #scroll-content {
-        @include row();
-        position: absolute;
-        bottom: 10px;
-        text-align:center;
-        width:100%;
-    }
-}
-
-.philosophy{
-    background-color: #B37FC7;
-    text-align:center;
-    padding: 50px;
-
-    h1 {
-        font-size: 3em;
-    }
-    p {
-        font-size: 1.2em;
-    }
-}
-
-.preview{
-    background-color: white;
-    text-align:center;
-    padding-top:50px;
-    padding-bottom:50px;
-    @include clearfix;
-
-    .content{
-        @include clearfix;
-        .content-image {
-            @include span-columns(12);
-            @include media($large-screen){
-                @include span-columns(4);
-            }
-        }
-
-        .content-text {
-            @include span-columns(12);
-            @include media($large-screen){
-                @include span-columns(8);
-            }
-        }
-    }
-
-    h1 {
-        font-size: 3em;
-    }
-    p {
-        font-size: 1.2em;
-    }
-}
-
-.sell-me {
-    background-color: #8F4BAA;
-    @include outer-container(100);
-    text-align:center;
-
-    #left, #right {
-        @include span-columns(12);
-        @include media($medium-screen){
-            @include span-columns(6);
-        }
-        padding: 100px;
-
-        button {
-            margin-top: 50px;
-        }
-    }
-}
-
-
-
-
-
-//This is used to make the svgs clickable. Should put this somewhere into the base.
-a.svg {
-  position: relative;
-  display: inline-block;
-}
-a.svg:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left:0;
+		height: 100vh;
+		background-image:
+	    linear-gradient(0deg,
+	      $n 0%, $n 9px,
+	      $b 9px, $b 10px, $n 10px, $n 19px,
+	      $t 19px, $t 20px, $n 20px, $n 29px,
+	      $t 29px, $t 30px, $n 30px, $n 39px,
+	      $t 39px, $t 40px, $n 40px, $n 49px,
+	      $t 49px, $t 50px),
+	    linear-gradient(-90deg,
+	      $n 0%, $n 9px,
+	      $b 9px, $b 10px, $n 10px, $n 19px,
+	      $t 19px, $t 20px, $n 20px, $n 29px,
+	      $t 29px, $t 30px, $n 30px, $n 39px,
+	      $t 39px, $t 40px, $n 40px, $n 49px,
+	      $t 49px, $t 50px);
+	  background-size: 50px 50px;
 }

@@ -20,6 +20,12 @@ html {
 	@include row();
 }
 
+.secondPage{
+	@include outer-container(100%);
+	height: 100vh;
+	background-color: white;
+}
+
 .landing-page {
     @include outer-container(100%);
 		height: 100vh;
@@ -97,4 +103,47 @@ html {
 	stroke-dasharray: 2000;
   stroke-dashoffset: 2000;
   animation: dash 1s linear forwards;
+}
+
+.backgroundCode {
+	position: absolute;
+	top: 20vh;
+	left: 20vw;
+	font-family: $code-font-family;
+	color: $light-gray;
+}
+
+.vertPX {
+	font-family: $code-font-family;
+	color: $light-gray;
+	font-size: .8em;
+	transform: rotate(90deg);
+	transform-origin: left top 0;
+	display: inline-block;
+	position: absolute;
+	top:0;
+	right:13vw;
+
+}
+.horPX {
+	font-family: $code-font-family;
+	color: $light-gray;
+	font-size: .8em;
+	position: absolute;
+	top: 15vh;
+	left: 20vw;
+}
+
+.pixelPerfect {
+	color: white;
+	position: absolute;
+	left: 15vw;
+	top: 65vh;
+}
+
+.builtBy{
+	color: white;
+	position: absolute;
+	bottom: 0;
+	left: 5vw;
 }

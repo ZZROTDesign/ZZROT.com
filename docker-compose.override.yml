@@ -3,6 +3,9 @@ services:
     zzrot.com:
         ports:
             -   "80:80"
+    blog.zzrot.com:
+        ports:
+            -   "2368:2368"
     developer:
         build: ./compose/developer
         container_name: dev

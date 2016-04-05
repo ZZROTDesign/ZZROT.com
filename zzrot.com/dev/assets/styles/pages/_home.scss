@@ -14,6 +14,40 @@ html {
 
 .topRow{
 	@include row();
+	height: 15vh;
+
+	.logo-wrapper {
+		height: 10vh;
+		width: 50vw;
+		padding-top:2.5vh;
+
+
+		@include media($medium-screen){
+			width: 40vw;
+		}
+
+		@include media($large-screen){
+			width: 25vw;
+		}
+
+	}
+
+	#logo {
+		height: 90%;
+		width: 90%;
+
+		.shape {
+			stroke-width: 4px;
+			fill: transparent;
+			stroke: #fff;
+			stroke-dasharray: 1000;
+		  stroke-dashoffset: 1000;
+		}
+
+		.active {
+			animation: dash 2s linear forwards;
+		}
+	}
 }
 
 .secondRow{
@@ -53,15 +87,15 @@ html {
   transform: translate(-50%, -50%);
   width: 320px;
 }
-.shape {
-  stroke-dasharray: 140 540;
-  stroke-dashoffset: -474;
-  stroke-width: 8px;
-  fill: transparent;
-  stroke: #fff;
-  border-bottom: 5px solid black;
-  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
-}
+// .shape {
+//   stroke-dasharray: 140 540;
+//   stroke-dashoffset: -474;
+//   stroke-width: 8px;
+//   fill: transparent;
+//   stroke: #fff;
+//   border-bottom: 5px solid black;
+//   transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+// }
 .text {
   font-family: 'Roboto Condensed';
   font-size: 22px;

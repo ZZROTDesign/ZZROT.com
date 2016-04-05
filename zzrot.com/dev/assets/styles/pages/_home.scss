@@ -12,53 +12,7 @@ html {
 	text-align: center;
 }
 
-.topRow{
-	@include row();
-	height: 15vh;
 
-	.logo-wrapper {
-		height: 10vh;
-		width: 50vw;
-		padding-top:2.5vh;
-
-
-		@include media($medium-screen){
-			width: 40vw;
-		}
-
-		@include media($large-screen){
-			width: 25vw;
-		}
-
-	}
-
-	#logo {
-		height: 90%;
-		width: 90%;
-
-		.shape {
-			stroke-width: 4px;
-			fill: transparent;
-			stroke: #fff;
-			stroke-dasharray: 1000;
-		  stroke-dashoffset: 1000;
-		}
-
-		.active {
-			animation: dash 2s linear forwards;
-		}
-	}
-}
-
-.secondRow{
-	@include row();
-}
-
-.secondPage{
-	@include outer-container(100%);
-	height: 100vh;
-	background-color: white;
-}
 
 .landing-page {
     @include outer-container(100%);
@@ -79,14 +33,98 @@ html {
 	      $t 39px, $t 40px, $n 40px, $n 49px,
 	      $t 49px, $t 50px);
 	  background-size: 50px 50px;
+
+		.topRow{
+			@include row();
+			height: 15vh;
+
+			.logo-wrapper {
+				height: 10vh;
+				width: 50vw;
+				padding-top:2.5vh;
+
+
+				@include media($medium-screen){
+					width: 40vw;
+				}
+
+				@include media($large-screen){
+					width: 25vw;
+				}
+
+			}
+
+			#logo {
+				height: 90%;
+				width: 90%;
+
+				.shape {
+					stroke-width: 4px;
+					fill: transparent;
+					stroke: #fff;
+					stroke-dasharray: 900;
+				  stroke-dashoffset: 1000;
+				}
+
+				.active {
+					animation: dash 4s linear forwards;
+				}
+
+			}
+		}
+
+		.attn-wrapper {
+			height: 10vh;
+			width: 50vw;
+			padding-top:2.5vh;
+			position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+
+
+			@include media($medium-screen){
+				width: 40vw;
+			}
+
+			@include media($large-screen){
+				width: 25vw;
+			}
+
+		}
+
+		#attn {
+			height: 90%;
+			width: 90%;
+
+			.shape {
+				stroke-width: 4px;
+				fill: transparent;
+				stroke: #fff;
+				stroke-dasharray: 900;
+				stroke-dashoffset: 1000;
+			}
+
+			.active {
+				animation: dash 4s linear forwards;
+			}
+
+		}
 }
-.svg-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 320px;
+
+.secondPage{
+	@include outer-container(100%);
+	height: 100vh;
+	background-color: white;
 }
+
+// .svg-wrapper {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   width: 320px;
+// }
 // .shape {
 //   stroke-dasharray: 140 540;
 //   stroke-dashoffset: -474;
@@ -121,7 +159,7 @@ html {
 	right:15vw;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: dash 1s linear forwards;
+  animation: dash 2s linear forwards;
 }
 
 @keyframes dash {
@@ -136,7 +174,7 @@ html {
 	left:0;
 	stroke-dasharray: 2000;
   stroke-dashoffset: 2000;
-  animation: dash 1s linear forwards;
+  animation: dash 2s linear forwards;
 }
 
 .backgroundCode {
@@ -180,4 +218,24 @@ html {
 	position: absolute;
 	bottom: 0;
 	left: 5vw;
+}
+
+.logo-text {
+	// font-family: 'Roboto Condensed';
+	// font-size: 22px;
+	// line-height: 32px;
+	// letter-spacing: 8px;
+	color: #fff;
+	top: -48px;
+	position: relative;
+}
+
+.attn-text {
+	// font-family: 'Roboto Condensed';
+	// font-size: 22px;
+	// line-height: 32px;
+	// letter-spacing: 8px;
+	color: #fff;
+	top: -48px;
+	position: relative;
 }

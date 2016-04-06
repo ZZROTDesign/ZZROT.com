@@ -2,7 +2,7 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 body {
-  background-image: url("/images/brickwall.jpg");
+  background-image: url("/images/brickwall.png");
 }
 
 #menu-button {
@@ -46,9 +46,11 @@ body {
                 @include span-columns(12);
 
                 @include media($large-screen){
-                    @include span-columns(8);
+                    @include span-columns(12);
                 }
-
+                transition: all .2s ease-in-out;
+                #description:hover { transform: scale(1.1); }
+                
                 line-height: 0;
                 h2 {
                     line-height:.8;

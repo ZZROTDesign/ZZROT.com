@@ -1,6 +1,10 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+body {
+  background-image: url("/images/brickwall.jpg");
+}
+
 #menu-button {
     float:right;
     right: 20px;
@@ -8,6 +12,8 @@
     z-index: 2;
 }
 .landing-page {
+  color: white;
+
     @include outer-container(100%);
     text-align:center;
     height: 100vh;
@@ -17,7 +23,6 @@
         height: $navigation-height;
         width: 100%;
         font-family: $base-font-family;
-        background-color: white;
         color: #B37FC7;
         @include clearfix;
         #logo {
@@ -26,7 +31,7 @@
     }
 
     #main-content {
-        padding-top: $navigation-height;
+      padding-top: $navigation-height;
         @include direction-context(right-to-left) {
             #text-messages {
                 @include span-columns(12);
@@ -86,7 +91,7 @@
 }
 
 .preview{
-    background-color: white;
+    //background-color: white;
     text-align:center;
     padding-top:50px;
     padding-bottom:50px;

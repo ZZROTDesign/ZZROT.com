@@ -1,4 +1,4 @@
-zzrot.com {
+www.zzrot.com, zzrot.com {
 
 				proxy / zzrot.com:80
 
@@ -11,7 +11,7 @@ zzrot.com {
 
 				gzip
 
-				tls zzrotdesign@gmail.com
+				tls sean@zzrot.com
 }
 
 blog.zzrot.com {
@@ -26,5 +26,17 @@ blog.zzrot.com {
 
 			gzip
 
-			tls zzrotdesign@gmail.com
+			tls sean@zzrot.com
+}
+
+jenkins.zzrot.com {
+	proxy / jenkins.zzrot.com:8080 {
+		proxy_header Host {host}
+		proxy_header X-Real-IP {remote}
+		proxy_header X-Forwarded-Proto {scheme}
+	}
+
+	gzip
+
+	tls sean@zzrot.com
 }

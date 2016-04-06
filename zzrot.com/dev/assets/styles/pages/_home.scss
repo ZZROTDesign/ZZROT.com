@@ -12,7 +12,7 @@ body {
     z-index: 2;
 }
 .landing-page {
-  color: white;
+  color: #B2F7F7;
 
     @include outer-container(100%);
     text-align:center;
@@ -23,7 +23,7 @@ body {
         height: $navigation-height;
         width: 100%;
         font-family: $base-font-family;
-        color: #B37FC7;
+        color: #B2F7F7;
         @include clearfix;
         #logo {
             float: left;
@@ -48,9 +48,7 @@ body {
                 @include media($large-screen){
                     @include span-columns(12);
                 }
-                transition: all .2s ease-in-out;
-                #description:hover { transform: scale(1.1); }
-                
+
                 line-height: 0;
                 h2 {
                     line-height:.8;
@@ -72,6 +70,8 @@ body {
     }
     #scroll-content {
         @include row();
+        font-size: 3vw;
+        color: #000;
         position: absolute;
         bottom: 10px;
         text-align:center;
@@ -80,7 +80,7 @@ body {
 }
 
 .philosophy{
-    background-color: #B37FC7;
+    background-color: #D8FBFB;
     text-align:center;
     padding: 50px;
 

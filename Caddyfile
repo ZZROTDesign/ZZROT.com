@@ -3,3 +3,5 @@
 root /var/www/html
 
 log stderr
+
+errors stderr

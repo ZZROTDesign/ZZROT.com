@@ -1,7 +1,7 @@
 version: '2'
 services:
     zzrot.com:
-        image: skilgarriff/alpine-caddy
+        image: zzrot/alpine-caddy
         volumes:
             -   ./Caddyfile:/etc/Caddyfile
             -   ./zzrot.com/public:/var/www/html

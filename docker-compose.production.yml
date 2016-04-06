@@ -1,7 +1,7 @@
 version: '2'
 services:
     proxy:
-        image: skilgarriff/alpine-caddy
+        image: zzrot/alpine-caddy
         ports:
             -   "80:80"
             -   "443:443"

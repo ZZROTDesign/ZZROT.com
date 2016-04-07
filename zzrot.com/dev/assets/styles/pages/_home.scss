@@ -2,240 +2,49 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 
-$c: #58c;
-$b: rgba(255,255,255,.2);
-$t: rgba(255,255,255,.1);
-$n: transparent;
-
-html {
-  background-image: linear-gradient(to bottom, $c 0%, darken($c, 15%) 100%);
-	text-align: center;
-}
-
-
-
 .landing-page {
-    @include outer-container(100%);
-		height: 100vh;
-		background-image:
-	    linear-gradient(0deg,
-	      $n 0%, $n 9px,
-	      $b 9px, $b 10px, $n 10px, $n 19px,
-	      $t 19px, $t 20px, $n 20px, $n 29px,
-	      $t 29px, $t 30px, $n 30px, $n 39px,
-	      $t 39px, $t 40px, $n 40px, $n 49px,
-	      $t 49px, $t 50px),
-	    linear-gradient(-90deg,
-	      $n 0%, $n 9px,
-	      $b 9px, $b 10px, $n 10px, $n 19px,
-	      $t 19px, $t 20px, $n 20px, $n 29px,
-	      $t 29px, $t 30px, $n 30px, $n 39px,
-	      $t 39px, $t 40px, $n 40px, $n 49px,
-	      $t 49px, $t 50px);
-	  background-size: 50px 50px;
-
-		.topRow{
-			@include row();
-			height: 15vh;
-
-			.logo-wrapper {
-				height: 10vh;
-				width: 50vw;
-				padding-top:2.5vh;
-
-
-				@include media($medium-screen){
-					width: 40vw;
-				}
-
-				@include media($large-screen){
-					width: 25vw;
-				}
-
-			}
-
-			#logo {
-				height: 90%;
-				width: 90%;
-
-				.shape {
-					stroke-width: 4px;
-					fill: transparent;
-					stroke: #fff;
-					stroke-dasharray: 900;
-				  stroke-dashoffset: 1000;
-				}
-
-				.active {
-					animation: dash 4s linear forwards;
-				}
-
-			}
-		}
-
-		.attn-wrapper {
-			height: 10vh;
-			width: 50vw;
-			padding-top:2.5vh;
-			position: absolute;
-		  top: 50%;
-		  left: 50%;
-		  transform: translate(-50%, -50%);
-
-
-			@include media($medium-screen){
-				width: 40vw;
-			}
-
-			@include media($large-screen){
-				width: 25vw;
-			}
-
-		}
-
-		#attn {
-			height: 90%;
-			width: 90%;
-
-			.shape {
-				stroke-width: 4px;
-				fill: transparent;
-				stroke: #fff;
-				stroke-dasharray: 900;
-				stroke-dashoffset: 1000;
-			}
-
-			.active {
-				animation: dash 4s linear forwards;
-			}
-
-		}
-}
-
-.secondPage{
-	@include outer-container(100%);
 	height: 100vh;
-	background-color: white;
+	background-image: url("/images/background.jpg");
+	filter: blur(8px);
 }
 
-// .svg-wrapper {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   width: 320px;
-// }
-// .shape {
-//   stroke-dasharray: 140 540;
-//   stroke-dashoffset: -474;
-//   stroke-width: 8px;
-//   fill: transparent;
-//   stroke: #fff;
-//   border-bottom: 5px solid black;
-//   transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
-// }
-.text {
-  font-family: 'Roboto Condensed';
-  font-size: 22px;
-  line-height: 32px;
-  letter-spacing: 8px;
-  color: #fff;
-  top: -48px;
-  position: relative;
-}
-.svg-wrapper:hover .shape {
-  stroke-width: 2px;
-  stroke-dashoffset: 0;
-  stroke-dasharray: 760;
+.main-content {
+	@include outer-container(100%);
+	text-align: center;
+
+	#logo {
+		position: absolute;
+		top: 30px;
+		left: 30px;
+	}
+
+
+	#description {
+		z-index: 2;
+		position: absolute;
+		@include row();
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: white;
+
+
+    line-height: 0;
+    h2 {
+        line-height:.8;
+        margin: .5em 0 .5em;
+        font-size:9vw;
+        @include media($medium-screen){
+            font-size:4.4vw;
+        }
+    .secondary {
+        font-size:8.5vw;
+
+        @include media($medium-screen){
+            font-size:4vw;
+        }
+    }
+	}
 }
 
-.logo {
-	float: left;
-}
-
-#verticalLine {
-	position: absolute;
-	top:0;
-	right:15vw;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash 2s linear forwards;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-#horLine {
-	position: absolute;
-	top:15vh;
-	left:0;
-	stroke-dasharray: 2000;
-  stroke-dashoffset: 2000;
-  animation: dash 2s linear forwards;
-}
-
-.backgroundCode {
-	position: absolute;
-	top: 20vh;
-	left: 20vw;
-	font-family: $code-font-family;
-	color: $light-gray;
-}
-
-.vertPX {
-	font-family: $code-font-family;
-	color: $light-gray;
-	font-size: .8em;
-	transform: rotate(90deg);
-	transform-origin: left top 0;
-	display: inline-block;
-	position: absolute;
-	top:0;
-	right:13vw;
-
-}
-.horPX {
-	font-family: $code-font-family;
-	color: $light-gray;
-	font-size: .8em;
-	position: absolute;
-	top: 15vh;
-	left: 20vw;
-}
-
-.pixelPerfect {
-	color: white;
-	position: absolute;
-	left: 15vw;
-	top: 65vh;
-}
-
-.builtBy{
-	color: white;
-	position: absolute;
-	bottom: 0;
-	left: 5vw;
-}
-
-.logo-text {
-	// font-family: 'Roboto Condensed';
-	// font-size: 22px;
-	// line-height: 32px;
-	// letter-spacing: 8px;
-	color: #fff;
-	top: -48px;
-	position: relative;
-}
-
-.attn-text {
-	// font-family: 'Roboto Condensed';
-	// font-size: 22px;
-	// line-height: 32px;
-	// letter-spacing: 8px;
-	color: #fff;
-	top: -48px;
-	position: relative;
 }

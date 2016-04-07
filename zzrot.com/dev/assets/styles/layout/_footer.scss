@@ -2,60 +2,38 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 footer {
-    background-color: $light-gray;
-    font-size: .5em;
-    @include clearfix;
-
-    a {
-        color: $dark-gray;
-        cursor:pointer;
-    }
-    a:hover {
-        color: $light-purple;
-    }
-
-    #sitemap, #contact, #social {
-        @include span-columns(12);
-
-        padding:20px;
-
-        @include media($medium-screen){
-            @include span-columns(4);
-            padding: 50px;
-        }
+	@include outer-container(100%);
+	font-family: $welcome-font;
 
 
-    }
+	height: 10vh;
+	position: fixed;
+	bottom:0;
+	left: 50%;
+  transform: translate(-50%, 0);
 
-    #sitemap {
+	.copyright, .social {
+			@include span-columns(12);
+			text-align: center;
+
+	}
+
+	.social {
+			a {
+					color: #323232;
+					cursor: pointer;
 
 
-        li {
-            display: inline-block;
-        }
-        ul li:after { content: " \00b7"; }
-        ul li:last-child:after { content: none; }
-    }
+			}
 
-    #contact{
-        #address, #phone, #email{
-            i, p {
-                display:inline-block;
-                padding: 3px;
-            }
 
-            i {
-                font-size:2em;
-            }
-        }
-    }
+	}
 
-    #social {
-        #socialMediaIcons{
-            font-size:3em;
-            i {
-                padding-left:15px;
-            }
-        }
-    }
+	.copyright {
+			margin-top: 10px;
+			a{
+					color: $base-font-color;
+			}
+
+	}
 }

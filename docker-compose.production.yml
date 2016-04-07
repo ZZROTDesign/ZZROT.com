@@ -17,15 +17,15 @@ services:
     blog.zzrot.com:
         expose:
             -   2368
-    jenkins.zzrot.com:
-        image: jenkins
-        ports:
-          - "50000:50000"
-        expose:
-          - 8080
-        volumes:
-          - ./zzrot.com/:/var/jenkins_home
-        environment:
-          - JAVA_OPTS="-Xmx1024m"
-        networks:
-          - frontend
+    #jenkins.zzrot.com:
+    #    image: jenkins
+    #    ports:
+    #      - "50000:50000"
+    #    expose:
+    #      - 8080
+    #    volumes:
+    #      - ./zzrot.com/:/var/jenkins_home
+    #    environment:
+    #      - JAVA_OPTS="-Xmx1024m"
+    #    networks:
+    #      - frontend

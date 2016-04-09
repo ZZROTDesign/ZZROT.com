@@ -20,8 +20,9 @@
   $modal-trigger-image-width: 300px;
 
   label {
-    @include outer-container(%100);
+    //@include outer-container(%100);
     @include span-columns(12);
+    //display: inline-block;
     //display: inline-block;
     //width: 110px;
     color: white;

@@ -67,7 +67,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var bourbon = require('node-bourbon').includePaths;
 var neat = require('node-neat').includePaths;
 
-
+//SCSS linter
+//var scsslint = require('gulpt-scss-lint');
 //Image Plugins
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
@@ -78,6 +79,7 @@ var uglify = require('gulp-uglify');
 //Browsersync
 var browserSync = require("browser-sync").create();
 
+var plumber = require('gulp-plumber');
 
 /*
 * Extra Variables Go Here
@@ -147,7 +149,9 @@ gulp.task('htmlbuild', function () {
 */
 gulp.task('sass', function () {
     return gulp.src(paths.styles.input)
+        .pipe(customPlumber())
         .pipe(sourcemaps.init())
+        //.pipe(sass().on('error', errorHandler))
         .pipe(sass({
             includePaths: [].concat(bourbon, neat)
         }))
@@ -160,6 +164,22 @@ gulp.task('sass', function () {
             stream: true
         }));
 });
+
+/*
+*
+* Plumber for Error Handling
+* Could be added to any function to catch errors
+*
+*/
+function customPlumber () {
+  return plumber({
+    errorHandler: function(err) {
+      console.log(err.stack);
+      this.emit('end');
+    }
+  })
+}
+
 
 /*
 *

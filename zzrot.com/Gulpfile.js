@@ -78,6 +78,8 @@ var uglify = require('gulp-uglify');
 //Browsersync
 var browserSync = require("browser-sync").create();
 
+//Plumber
+var plumber = require('gulp-plumber');
 
 /*
 * Extra Variables Go Here
@@ -147,6 +149,7 @@ gulp.task('htmlbuild', function () {
 */
 gulp.task('sass', function () {
     return gulp.src(paths.styles.input)
+        .pipe(customPlumber())
         .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: [].concat(bourbon, neat)
@@ -161,6 +164,15 @@ gulp.task('sass', function () {
         }));
 });
 
+
+function customPlumber() {
+  return plumber({
+    errorHandler: function(err) {
+      console.log(err.stack);
+      this.emit('end');
+    }
+  })
+}
 /*
 *
 * IMAGES

@@ -15,6 +15,11 @@ services:
         expose:
             -   80
     blog.zzrot.com:
+        environment:
+          DEV_DOMAIN: https://blog.zzrot.com
+          NODE_ENV: production
+        volumes:
+          - blog.ghost.com/content/:/var/lib/ghost/
         expose:
             -   2368
     #jenkins.zzrot.com:

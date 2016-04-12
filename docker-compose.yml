@@ -9,11 +9,6 @@ services:
             -   frontend
     blog.zzrot.com:
         image: zzrot/alpine-ghost
-        environment:
-          DEV_DOMAIN: https://blog.zzrot.com
-          NODE_ENV: production
-        volumes:
-          - blog.ghost.com/content/:/var/lib/ghost/
         networks:
           -   frontend
 

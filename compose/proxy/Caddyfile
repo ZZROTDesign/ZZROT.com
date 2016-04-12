@@ -14,7 +14,11 @@ www.zzrot.com, zzrot.com {
 }
 
 blog.zzrot.com {
-			proxy / blog.zzrot.com:2368
+			proxy / blog.zzrot.com:2368 {
+				proxy_header Host {host}
+				proxy_header X-Real-IP {remote}
+				proxy_header X-Forwarded-Proto {scheme}
+			}
 
 			header / {
 				X-Frame-Options DENY

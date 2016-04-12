@@ -19,7 +19,7 @@ services:
           DEV_DOMAIN: https://blog.zzrot.com
           NODE_ENV: production
         volumes:
-          - blog.ghost.com/content/:/var/lib/ghost/
+          - ./blog.ghost.com/content/:/var/lib/ghost/
         expose:
             -   2368
     #jenkins.zzrot.com:

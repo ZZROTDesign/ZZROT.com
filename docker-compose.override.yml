@@ -7,7 +7,7 @@ services:
         environment:
           DEV_DOMAIN: http://192.168.99.100:2368
         volumes:
-          - ./blog.zzrot.com/content/:/var/lib/ghost/
+          - ./blog.zzrot.com/:/var/lib/ghost/
         ports:
             -   "2368:2368"
     developer:

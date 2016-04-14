@@ -22,6 +22,7 @@ services:
           - ./blog.zzrot.com/:/var/lib/ghost/
         expose:
             -   2368
+            
     #jenkins.zzrot.com:
     #    image: jenkins
     #    ports:

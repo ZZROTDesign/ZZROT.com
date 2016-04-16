@@ -12,3 +12,6 @@ compose/lencrypt/config/keys
 compose/lencrypt/config/live
 compose/lencrypt/config/renewal
 blog.zzrot.com/apps blog.zzrot.com/content blog.zzrot.com/data blog.zzrot.com/images blog.zzrot.com/themes
+
+blog.zzrot.com/*
+zzrot.com/queue.xml

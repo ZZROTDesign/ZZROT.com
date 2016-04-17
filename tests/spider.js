@@ -29,7 +29,6 @@ function spider(url) {
 	// Open the URL
 	casper.open(url).then(function() {
 		depth += 1;
-		console.log("Depth: " + depth);
 		// Set the status style based on server status code
 		var status = this.status().currentHTTPStatus;
 		switch(status) {

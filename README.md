@@ -1,4 +1,4 @@
-[![Build Status](http://162.243.15.248:8080/buildStatus/icon?job=basic page 200 tests&build=1)](http://162.243.15.248:8080/job/basic page 200 tests/1/)
+[![Build Status](http://162.243.15.248:8080/buildStatus/icon?job=basic page 200 tests)](http://162.243.15.248:8080/job/basic%20page%20200%20tests/)
 # ZZROT.com
 ##Official Website for ZZROT Design
 

@@ -12,6 +12,8 @@ casperjs test tests/tests.js --homeUrl=$homeUrl --blogUrl=$blogUrl
 echo ''
 # First CLI is link, second is maximum page count to open
 echo "Spidering links from home page"
+
+set -x
 casperjs tests/spider.js $homeUrl 10
 echo ''
 echo "Spidering links from blog"

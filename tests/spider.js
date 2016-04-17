@@ -1,12 +1,16 @@
 // Set the start URL
-var startUrl = 'http://192.168.99.100:2368';
-var blogUrl = 'http://192.168.99.100:2368';
-var depth = 0;
 
+// Option to hard code start Urls
+//var startUrl = 'http://192.168.99.100:2368';
+//var blogUrl = 'http://192.168.99.100:2368';
+var startUrl = '';
+var depth = 0;
+var maxDepth = 0;
 var casper = require('casper').create();
-//casper.echo("Casper CLI passed args:");
-require('utils').dump(casper.cli.args);
-require("utils").dump(casper.cli.options);
+
+startUrl = casper.cli.get(0);
+maxDepth = casper.cli.get(1);
+console.log('Url: ' + startUrl);
 
 // URL variables
 var visitedUrls = [], pendingUrls = [];
@@ -25,6 +29,7 @@ function spider(url) {
 	// Open the URL
 	casper.open(url).then(function() {
 		depth += 1;
+		console.log("Depth: " + depth);
 		// Set the status style based on server status code
 		var status = this.status().currentHTTPStatus;
 		switch(status) {
@@ -63,7 +68,7 @@ function spider(url) {
 		}
 
 	});
-	if (depth > 10) {
+	if (depth > maxDepth) {
 		casper.then.start(blogUrl, function() {
 			console.log('helo');
 			spider(blogUrl);
@@ -76,11 +81,5 @@ casper.start(startUrl, function() {
 	spider(startUrl);
 });
 
-/*
-casper.start(blogUrl, function() {
-	console.log('Spidering Blog!!');
-	spider(blogUrl);
-});
-*/
 // Start the run
 casper.run();

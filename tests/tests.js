@@ -34,6 +34,7 @@ casper.test.begin('Test blog page 200', 1, function(test) {
   });
 });
 
+/*
 casper.test.begin('Test page links', 1, function(test) {
   url = casper.cli.get('homeUrl');
   console.log('Home Url: ' + url);
@@ -48,3 +49,4 @@ casper.test.begin('Test page links', 1, function(test) {
     test.done();
   });
 });
+*/

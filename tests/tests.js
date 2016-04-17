@@ -13,7 +13,7 @@ var url = '';
 // Working 200 page test
 casper.test.begin('Test home page 200', 1, function(test) {
   url = casper.cli.get('homeUrl');
-  console.log('Url: ' + url);
+  console.log('Home Url: ' + url);
     casper.start(url, function() {
         test.assertHttpStatus(200);
     });
@@ -24,7 +24,8 @@ casper.test.begin('Test home page 200', 1, function(test) {
 
 
 casper.test.begin('Test blog page 200', 1, function(test) {
-  casper.start(blogUrl, function() {
+  casper.start(casper.cli.get('blogUrl'), function() {
+    console.log("Blog Url: " + casper.cli.get('homeurl'));
     test.assertHttpStatus(200);
   });
   casper.run(function() {
@@ -34,7 +35,7 @@ casper.test.begin('Test blog page 200', 1, function(test) {
 
 casper.test.begin('Test page links', 1, function(test) {
   casper.start(casper.cli.get('homeUrl'), function() {
-    var url = '';
+    console.log("Home Url: " + casper.cli.get('homeurl'));
     casper.then(function() {
       url = this.getElementAttribute('a', 'href');
       console.log(url);

@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 
 # Driver that runs after normal build tests and then
 # opens the links, logging the page status for
@@ -6,7 +6,7 @@
 bats tests/bats.sh
 homeUrl=http://162.243.15.248
 blogUrl=http://162.243.15.248:2368
-ç
+
 casperjs test tests/tests.js --homeUrl=$homeUrl --blogUrl=$blogUrl
 
 echo ''

@@ -10,7 +10,7 @@ var casper = require('casper').create();
 
 startUrl = casper.cli.get(0);
 maxDepth = casper.cli.get(1);
-console.log('Url: ' + startUrl);
+console.log('Start Url: ' + startUrl);
 
 // URL variables
 var visitedUrls = [], pendingUrls = [];

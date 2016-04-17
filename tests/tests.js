@@ -1,10 +1,20 @@
 var links = 0;
-var homeUrl = 'http://192.168.99.100';
+
+var homeUrl = '';
+//var blogUrl = '';
+
+//homeUrl = cli.get(0);
+//blogUrl = test.cli.get(1);
+
+var url = 'http://192.168.99.100';
 var blogUrl = 'http://192.168.99.100';
+var url = '';
 
 // Working 200 page test
 casper.test.begin('Test home page 200', 1, function(test) {
-    casper.start(homeUrl, function() {
+  url = casper.cli.get('homeUrl');
+  console.log('Url: ' + url);
+    casper.start(url, function() {
         test.assertHttpStatus(200);
     });
     casper.run(function() {
@@ -23,7 +33,7 @@ casper.test.begin('Test blog page 200', 1, function(test) {
 });
 
 casper.test.begin('Test page links', 1, function(test) {
-  casper.start(homeUrl, function() {
+  casper.start(casper.cli.get('homeUrl'), function() {
     var url = '';
     casper.then(function() {
       url = this.getElementAttribute('a', 'href');

@@ -13,6 +13,8 @@ blogUrl=http://162.243.15.248:2368
 # Repeat of the bats tests
 casperjs test tests/tests.js --homeUrl=$homeUrl --blogUrl=$blogUrl
 
+# Don't fail build because of these status outputs
+set +e
 #First CLI is link, second is maximum page count to open
 rm tests/pageStatus.txt
 echo "Spidering links from home page" >> tests/pageStatus.txt
